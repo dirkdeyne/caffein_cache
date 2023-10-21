@@ -2,12 +2,14 @@ package io.getmedusa.demo.service;
 
 import io.getmedusa.demo.model.DogsInHouse;
 import io.getmedusa.demo.model.Lang;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional(readOnly = true)
+@CacheConfig(cacheNames = {"dogsInHouse"})
 public class DogsInHouseService {
     final DogsInHouseRepository dogsInHouseRepository;
 

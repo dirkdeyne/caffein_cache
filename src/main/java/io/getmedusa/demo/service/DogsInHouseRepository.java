@@ -8,6 +8,5 @@ public interface DogsInHouseRepository extends ListCrudRepository<DogsInHouse,Lo
 
     DogsInHouse findByName(String name);
 
-
     DogsInHouse findByNameAndLangIs(String name, Lang lang);
 }

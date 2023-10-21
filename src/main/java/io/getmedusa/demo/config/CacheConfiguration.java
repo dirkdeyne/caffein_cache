@@ -17,7 +17,7 @@ public class CacheConfiguration {
     @Bean
     @Primary
     public CacheManager cacheManager() {
-        CaffeineCacheManager cacheManager = new CaffeineCacheManager("dogsInHouseByNameAndLang","dogsInHouse");
+        CaffeineCacheManager cacheManager = new CaffeineCacheManager("dogsInHouse");
         cacheManager.setCaffeine(Caffeine.newBuilder()
                 .initialCapacity(200)
                 .expireAfterAccess(Duration.ofDays(30))
